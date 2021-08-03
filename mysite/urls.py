@@ -16,6 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.views.static import serve
+from django.conf.urls import url
 
 from .views import register_request, logout_req, home_page, login_request
 from products.views import *
