@@ -28,4 +28,6 @@ urlpatterns = [
     path('register/', register_request, name= "register"),
     path('login/', login_request, name= "login"),
     path('logout/', logout_req, name= "logout"),
+    url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
+    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
 ]
